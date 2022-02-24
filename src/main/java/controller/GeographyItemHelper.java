@@ -76,7 +76,7 @@ public class GeographyItemHelper {
 	 * @return
 	 */
 	public GeographyItem searchForItemById(int idToEdit) {
-		// TODO Auto-generated method stub
+		
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		GeographyItem found = em.find(GeographyItem.class, idToEdit);
@@ -89,7 +89,7 @@ public class GeographyItemHelper {
 	 * @return
 	 */
 	public List<GeographyItem> searchForCountryByCountry(String countryName) {
-		// TODO Auto-generated method stub
+		
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<GeographyItem>typedQuery  = em.createQuery("select gi from GeographyItem gi where gi.country = :selectedCountry", GeographyItem.class);
@@ -105,7 +105,7 @@ public class GeographyItemHelper {
 	 * @return
 	 */
 	public List<GeographyItem> searchForCountryByCapital(String capitalName) {
-		// TODO Auto-generated method stub
+		
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<GeographyItem>typedQuery = em.createQuery("select gi from GeographyItem gi where gi.capital =:selectedCapital",GeographyItem.class);
